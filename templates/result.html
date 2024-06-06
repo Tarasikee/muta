@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #555555;
+        }
+        .high-risk {
+            color: #ff4d4d;
+        }
+        .low-risk {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Diabetes Prediction Result</h2>
+        {% if prediction[0] == 1 %}
+            <p class="high-risk">The result indicates a high probability of diabetes. Please consult with your healthcare provider for further advice and testing.</p>
+        {% else %}
+            <p class="low-risk">The result indicates a low probability of diabetes. Keep maintaining a healthy lifestyle and regular check-ups.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pima Diabetes KNN Model Check</title>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .container {
+                background: #ffffff;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                max-width: 500px;
+                width: 100%;
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333333;
+                font-weight: 500;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 500;
+                color: #555555;
+            }
+
+            input, input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                transition: border-color 0.3s;
+            }
+
+            input:focus {
+                border-color: #6c63ff;
+                outline: none;
+            }
+
+            input[type="submit"] {
+                background-color: #6c63ff;
+                color: #ffffff;
+                border: none;
+                cursor: pointer;
+                font-weight: 500;
+                transition: background-color 0.3s;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #5750d1;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Check Diabetes Risk</h2>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="pregnancies">Pregnancies:</label>
+                    <input id="pregnancies" name="pregnancies" placeholder="e.g., 2" required>
+                </div>
+                <div class="form-group">
+                    <label for="glucose">Glucose:</label>
+                    <input id="glucose" name="glucose" placeholder="e.g., 130" required>
+                </div>
+                <div class="form-group">
+                    <label for="bloodpressure">Blood Pressure:</label>
+                    <input id="bloodpressure" name="bloodpressure" placeholder="e.g., 85" required>
+                </div>
+                <div class="form-group">
+                    <label for="skinthickness">Skin Thickness:</label>
+                    <input id="skinthickness" name="skinthickness" placeholder="e.g., 23" required>
+                </div>
+                <div class="form-group">
+                    <label for="insulin">Insulin:</label>
+                    <input id="insulin" name="insulin" placeholder="e.g., 94" required>
+                </div>
+                <div class="form-group">
+                    <label for="bmi">BMI:</label>
+                    <input id="bmi" name="bmi" placeholder="e.g., 28.4" required>
+                </div>
+                <div class="form-group">
+                    <label for="dpf">Diabetes Pedigree Function:</label>
+                    <input id="dpf" name="dpf" placeholder="e.g., 0.627" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input id="age" name="age" placeholder="e.g., 32" required>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
